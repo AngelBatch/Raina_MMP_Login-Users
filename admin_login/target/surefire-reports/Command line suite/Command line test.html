@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Sep 20 10:09:08 EDT 2017</td>
+</tr>
+<tr><td>Total time:</td><td>138 seconds (138085 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mmp.admin_login.UsersTest.changeStatusBlank()'><b>changeStatusBlank</b><br>Test class: com.mmp.admin_login.UsersTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.mmp.admin_login.UsersTest.changeStatusBlank(UsersTest.java:98)
+... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace823914581", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace823914581'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.mmp.admin_login.UsersTest.changeStatusBlank(UsersTest.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>13</td>
+<td>com.mmp.admin_login.UsersTest@3f2a3a5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.mmp.admin_login.UsersTest.changeStatusValid()'><b>changeStatusValid</b><br>Test class: com.mmp.admin_login.UsersTest</td>
+<td></td>
+<td>14</td>
+<td>com.mmp.admin_login.UsersTest@3f2a3a5</td></tr>
+<tr>
+<td title='com.mmp.admin_login.LoginTest.forgotPwordInvalid()'><b>forgotPwordInvalid</b><br>Test class: com.mmp.admin_login.LoginTest<br>Test method: validate the Forgot Password functionality with invalid values</td>
+<td></td>
+<td>0</td>
+<td>com.mmp.admin_login.LoginTest@4cb2c100</td></tr>
+<tr>
+<td title='com.mmp.admin_login.LoginTest.forgotPwordLink()'><b>forgotPwordLink</b><br>Test class: com.mmp.admin_login.LoginTest<br>Test method:  validate the Forgot Password Link.</td>
+<td></td>
+<td>0</td>
+<td>com.mmp.admin_login.LoginTest@4cb2c100</td></tr>
+<tr>
+<td title='com.mmp.admin_login.LoginTest.forgotPwordValid()'><b>forgotPwordValid</b><br>Test class: com.mmp.admin_login.LoginTest<br>Test method: validate the Forgot Password functionality with valid values<br>Parameters: samjones@gmail.com, samjones</td>
+<td></td>
+<td>1</td>
+<td>com.mmp.admin_login.LoginTest@4cb2c100</td></tr>
+<tr>
+<td title='com.mmp.admin_login.LoginTest.logInWithBlank()'><b>logInWithBlank</b><br>Test class: com.mmp.admin_login.LoginTest<br>Test method: validate the Admin LOGIN form with the fields blank</td>
+<td></td>
+<td>0</td>
+<td>com.mmp.admin_login.LoginTest@4cb2c100</td></tr>
+<tr>
+<td title='com.mmp.admin_login.LoginTest.logInWithInvalid()'><b>logInWithInvalid</b><br>Test class: com.mmp.admin_login.LoginTest<br>Test method: validate the Admin LOGIN form with all the invalid values in the given fields<br>Parameters: samjones, India</td>
+<td></td>
+<td>1</td>
+<td>com.mmp.admin_login.LoginTest@4cb2c100</td></tr>
+<tr>
+<td title='com.mmp.admin_login.LoginTest.logInWithInvalid()'><b>logInWithInvalid</b><br>Test class: com.mmp.admin_login.LoginTest<br>Test method: validate the Admin LOGIN form with all the invalid values in the given fields<br>Parameters: swmod, Samjones123</td>
+<td></td>
+<td>1</td>
+<td>com.mmp.admin_login.LoginTest@4cb2c100</td></tr>
+<tr>
+<td title='com.mmp.admin_login.LoginTest.logInWithInvalid()'><b>logInWithInvalid</b><br>Test class: com.mmp.admin_login.LoginTest<br>Test method: validate the Admin LOGIN form with all the invalid values in the given fields<br>Parameters: charlotte, USA</td>
+<td></td>
+<td>1</td>
+<td>com.mmp.admin_login.LoginTest@4cb2c100</td></tr>
+<tr>
+<td title='com.mmp.admin_login.LoginTest.logInWithValid()'><b>logInWithValid</b><br>Test class: com.mmp.admin_login.LoginTest<br>Test method: validate the Admin LOGIN form with all the valid values in the given fields<br>Parameters: samjones, Samjones123</td>
+<td></td>
+<td>10</td>
+<td>com.mmp.admin_login.LoginTest@4cb2c100</td></tr>
+<tr>
+<td title='com.mmp.admin_login.UsersTest.usersLink()'><b>usersLink</b><br>Test class: com.mmp.admin_login.UsersTest<br>Parameters: samjones, Samjones123</td>
+<td></td>
+<td>11</td>
+<td>com.mmp.admin_login.UsersTest@3f2a3a5</td></tr>
+<tr>
+<td title='com.mmp.admin_login.UsersTest.viewPatByStatus()'><b>viewPatByStatus</b><br>Test class: com.mmp.admin_login.UsersTest</td>
+<td></td>
+<td>0</td>
+<td>com.mmp.admin_login.UsersTest@3f2a3a5</td></tr>
+</table><p>
+</body>
+</html>
